@@ -9,7 +9,6 @@ using Random = UnityEngine.Random;
 using SlugBase.SaveData;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using static Vinki.Plugin;
 
 namespace Vinki
 {
@@ -1059,6 +1058,23 @@ namespace Vinki
                     oracleBehavior.dialogBox.NewMessage(oracleBehavior.Translate("Now let me take a look..."), 0);
                     oracleBehavior.dialogBox.NewMessage(oracleBehavior.Translate("This lizard looks very angry! I wonder what you did to cause it to be so mad at you."), 0);
                     oracleBehavior.dialogBox.NewMessage(oracleBehavior.Translate("I know some variations of lizards can spit sticky mucus at their prey, but a beam of energy would be incredibly dangerous. Stay safe, little friend!"), 0);
+                    break;
+                case "VinkiGraffiti/vinki/N0TKYU - Buckled Up":
+                    oracleBehavior.dialogBox.NewMessage(oracleBehavior.Translate("Now let me take a look..."), 0);
+                    oracleBehavior.dialogBox.NewMessage(oracleBehavior.Translate("Ah yes, your shoes. It seems like you admire them greatly."), 0);
+                    if (miscSave.TryGet("MetMoonTwice", out int metTwice) && metTwice > 0)
+                    {
+                        oracleBehavior.dialogBox.NewMessage(oracleBehavior.Translate("I hope that you enjoyed my short history lesson about where they came from."), 0);
+                    }
+                    else
+                    {
+                        oracleBehavior.dialogBox.NewMessage(oracleBehavior.Translate("If you return next cycle, I may have some more to tell you about them."), 0);
+                    }
+                    break;
+                case "VinkiGraffiti/vinki/quarter - Pinhead":
+                    oracleBehavior.dialogBox.NewMessage(oracleBehavior.Translate("Now let me take a look..."), 0);
+                    oracleBehavior.dialogBox.NewMessage(oracleBehavior.Translate("It is you, and you have several of my creator's written characters around you."), 0);
+                    oracleBehavior.dialogBox.NewMessage(oracleBehavior.Translate("I wonder if you know what they all mean, or if they simply look interesting to you. Do they represent your different thoughts throughout each cycle?"), 0);
                     break;
             }
         }
